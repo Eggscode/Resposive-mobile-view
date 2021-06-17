@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2em;
+    margin: 4em;
+}
+
+.nav-bar{
+    text-align: center;
+    background: rgb(30, 40, 48);
+    padding: 20px 0;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.nav-links > h3{
+    color: rgb(116, 236, 245);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: .3s;
+    margin-right: 4em;
+    border-radius: 4px;
+}
+
+a:last-of-type{
+    margin: 0;
+}
+
+a:hover{
+    color: rgb(30, 40, 48);
+    background: #fff;
+}
+
+.toggler{
+    display: none;
+}
+
+.client{
+    background: #ff7f50;
+    border-radius: 4px;
+    padding: 4px;
+    box-shadow:  2px 4px 10px rgba(0,0,0,0.5);
+}
+
+.client > img{
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+}
+.client >h3{
+    padding: 4px;
+    color: rgb(255, 255, 255);
+}
+
+.client >p{
+    font-size: 14px;
+    padding: 4px;
+    color: rgb(37, 37, 37);
+    margin-bottom: 4px;
+}
+
+.client >span{
+    font-size: 14px;
+    background: rgb(30, 40, 48);
+    padding: 10px 6px;
+    color: white;
+    margin: 4px;
+    border-radius: 2px;
+    display: block;
+    text-align: center;
+}
+
+@media(max-width:750px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 2em;
+        margin: 2em;
+    }
+
+    .client >p{
+        font-size: 16px;
+        color: rgb(37, 37, 37);
+    }
+
+    .client >h3{
+        font-size: 24px;
+    }
+
+    .nav-bar{
+        text-align: center;
+        background: rgb(30, 40, 48);
+        padding: 8px 0;
+        position: relative;
+        display: block;
+    }
+    
+
+    .toggler{
+        position: absolute;
+        right: 1em;
+        border: 1px solid white;
+        padding: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 6px;
+        display: inline-block;
+    }
+
+    .toggler span{
+        color: #fff;
+        border: 2px solid #FFF;
+        width: 30px;
+        display: block;
+        margin-bottom: 6px;
+        cursor: pointer;
+    }
+
+    .toggler span:last-of-type{
+        margin-bottom: 0;
+    }
+
+    .nav-links > h3{
+        color: rgb(116, 236, 245);
+        font-size: 22px;
+        padding: 20px 0;
+        cursor: pointer;
+    }
+
+    .nav-links{
+        display: block;
+    }
+
+    .nav-links a{
+        margin: 0;
+    }
+
+    ul{
+        display: none;
+    }
+
+    ul.active{
+        display: block;
+    }
+
+    a{
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 20px 0;
+        transition: .3s;
+    }
+
+    a:hover{
+        color: rgb(30, 40, 48);
+        background: #fff;
+    }
+
+}
